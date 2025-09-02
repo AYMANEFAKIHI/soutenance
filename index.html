@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soutenances - Notre Organisation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #DDD0C8;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-width: 1px;
+            border-color: #e5e7eb;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background-color: #323232; 
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #4b4b4b;
+        }
+        .section-heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            color: #323232;
+            margin-bottom: 2rem;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .menu a {
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            color: #4b5563;
+            transition: color 0.2s;
+        }
+        .menu a:hover {
+            color: #323232;
+        }
+        .package-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="container space-y-12 py-12">
+
+    <!-- En-tête avec Menu -->
+    <header class="flex flex-col md:flex-row justify-between items-center py-4 px-6 bg-white shadow rounded-lg">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">Portail des Soutenances</h1>
+        <nav class="menu flex flex-wrap justify-center space-x-4">
+            <a href="#accueil">Accueil</a>
+            <a href="#ressources">Ressources</a>
+            <a href="#packages">Nos Forfaits</a>
+            <a href="#inspiration">Inspiration</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section d'Accueil -->
+    <section id="accueil" class="card">
+        <h2 class="section-heading">Bienvenue sur le Portail des Soutenances</h2>
+        <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">
+            Ce portail est conçu pour centraliser toutes les informations liées aux soutenances des étudiants et faciliter la consultation et l'organisation.
+        </p>
+        <blockquote class="text-center italic text-gray-500 mt-4">
+            “L'éducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde.” - Nelson Mandela
+        </blockquote>
+        <div class="mt-8">
+            <h3 class="font-bold text-xl mb-2 text-gray-800">À propos de nous</h3>
+            <p class="text-gray-700">
+                Notre mission est de rendre le processus de soutenance plus transparent et moins stressant pour les étudiants, les enseignants et l'administration. Nous croyons en l'importance de l'accès à l'information et à la collaboration pour favoriser la réussite éducative.
+            </p>
+        </div>
+        <div class="mt-8">
+            <h3 class="font-bold text-xl mb-2 text-gray-800">Témoignages</h3>
+            <div class="grid md:grid-cols-2 gap-4 mt-4">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="italic text-gray-600">"C'était stressant mais inoubliable, le jury m'a encouragé à poursuivre mes recherches !"</p>
+                    <p class="font-semibold text-right mt-2">- Ancien étudiant</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="italic text-gray-600">"Cette plateforme nous a permis de gagner un temps précieux dans l'organisation des soutenances."</p>
+                    <p class="font-semibold text-right mt-2">- Responsable de département</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Espace Ressources -->
+    <section id="ressources" class="card">
+        <h2 class="section-heading">Espace Étudiant et Jury</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card p-6">
+                <h3 class="font-bold text-xl mb-2 text-gray-800">Guides et Fiches Pratiques</h3>
+                <p class="text-gray-600 mb-4">Téléchargez nos guides pour vous aider à préparer votre soutenance ou votre évaluation.</p>
+                <ul class="space-y-2">
+                    <li><a href="https://docs.google.com/document/d/18f_eDUO3oYk9qzDxHYUXN4VwRxTqkkiz/edit?usp=drive_link&ouid=107609364920012940139&rtpof=true&sd=true" class="text-blue-600 hover:underline" target="_blank" download>Modèle de mémoire (PDF)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1169uhgyx9FdKsx-I2_rRaz54VDu7PzFA/view?usp=drive_link" class="text-blue-600 hover:underline" target="_blank" download>Conseils pour la présentation orale (PDF)</a></li>
+                </ul>
+            </div>
+            <div class="card p-6">
+                <h3 class="font-bold text-xl mb-2 text-gray-800">Convocation</h3>
+                <p class="text-gray-600 mb-4">
+                    La convocation est envoyée par e-mail. Pour les questions sur votre date, consultez le planning ou contactez l'administration.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Nos Forfaits -->
+    <section id="packages">
+        <h2 class="section-heading">Nos Forfaits</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Forfait Basique -->
+            <div class="package-card card space-y-6">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-gray-800">Forfait Basique</h3>
+                    <p class="text-sm text-gray-500">Idéal pour les petites institutions</p>
+                </div>
+                <ul class="text-gray-700 space-y-2">
+                    <li class="flex items-center space-x-2"><span class="text-gray-500 font-bold">✓</span> Dépôt de mémoire</li>
+                    <li class="flex items-center space-x-2"><span class="text-gray-500 font-bold">✓</span> Suivi d'avancement</li>
+                    <li class="flex items-center space-x-2"><span class="text-gray-500 font-bold">✓</span> Évaluation par jury</li>
+                </ul>
+                <div class="flex justify-center mt-4">
+                    <a href="#contact" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+            <!-- Forfait Premium -->
+            <div class="package-card card space-y-6 border-[#323232] border-2">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-[#323232]">Forfait Premium</h3>
+                    <p class="text-sm text-gray-500">Pour une gestion complète et avancée</p>
+                </div>
+                <ul class="text-gray-700 space-y-2">
+                    <li class="flex items-center space-x-2"><span class="text-[#323232] font-bold">✓</span> Toutes les fonctionnalités du Forfait Basique</li>
+                    <li class="flex items-center space-x-2"><span class="text-[#323232] font-bold">✓</span> Calendrier interactif et planning</li>
+                    <li class="flex items-center space-x-2"><span class="text-[#323232] font-bold">✓</span> Notifications automatisées</li>
+                    <li class="flex items-center space-x-2"><span class="text-[#323232] font-bold">✓</span> Génération de convocations et PV</li>
+                    <li class="flex items-center space-x-2"><span class="text-[#323232] font-bold">✓</span> Réalisation de soutenance</li>
+                </ul>
+                <div class="flex justify-center mt-4">
+                    <a href="#contact" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Inspiration / Motivation -->
+    <section id="inspiration" class="card">
+        <h2 class="section-heading">Inspiration et Motivation</h2>
+        <div class="space-y-6">
+            <div class="text-center italic text-gray-600">
+                <p>“Le succès est la somme de petits efforts, répétés jour après jour.”</p>
+            </div>
+            <div class="space-y-4">
+                <h3 class="font-bold text-xl text-gray-800">Conseils pour gérer le stress</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Pratiquez la respiration profonde avant de commencer.</li>
+                    <li>Adoptez une posture droite et confiante.</li>
+                    <li>Gérez votre temps en vous entraînant à l'avance.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="card">
+        <h2 class="section-heading">Contactez-nous</h2>
+        <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-8">
+            Vous souhaitez en savoir plus ou obtenir un devis ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+        </p>
+        <form id="contact-form" action="https://formspree.io/f/mdklwobv" method="POST" class="space-y-6 max-w-xl mx-auto">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nom et Prénom</label>
+                <input type="text" id="name" name="name" class="input-field mt-1 w-full rounded-md border-gray-300 shadow-sm" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
+                <input type="email" id="email" name="email" class="input-field mt-1 w-full rounded-md border-gray-300 shadow-sm" required>
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Votre message</label>
+                <textarea id="message" name="message" rows="4" class="input-field mt-1 w-full rounded-md border-gray-300 shadow-sm" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            </div>
+        </form>
+        <div id="form-status" class="mt-4 text-center hidden">
+            <p class="text-gray-700">Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.</p>
+        </div>
+    </section>
+</div>
+
+<script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const data = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            if (response.ok) {
+                status.classList.remove('hidden');
+                form.reset();
+            } else {
+                status.classList.remove('hidden');
+                status.textContent = 'Une erreur est survenue lors de l\'envoi du message.';
+            }
+        } catch (error) {
+            status.classList.remove('hidden');
+            status.textContent = 'Une erreur est survenue lors de l\'envoi du message.';
+            console.error('Error submitting form:', error);
+        }
+    });
+</script>
+</body>
+</html>
